@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Papier, kamień i nożyczki</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="results-info"></div>
+    <button class="start-btn">Start</button>
+    <!-- MAIN WRAP -->
+    <section class="wrap">
+        <ul class="score">
+            <li class="score-item">Wyniki po każdej rundzie.</li>
+            <li class="score-item">Witaj <span class="player-name"></span></li>
+            <li class="score-item">Liczba rund:<span class="round">0</span></li>
+            <li class="score-item">Ilość wygranych gracza:<span class="win-player">0</span></li>
+            <li class="score-item">Ilość wygranych komputera:<span class="win-comp">0</span></li>
+            <li class="score-item">Ilość rund do końca:<span class="round-to-end">0</span></li>
+            <li class="score-item">Wybór gracza:<span class="player-move">0</span></li>
+            <li class="score-item">Wybór komputera:<span class="comp-move">0</span></li>
+            <li class="score-item">Wynik meczu: <span class="score-game">0 : 0</span></li>
+        </ul>
+        <div class="buttons">
+            <button class="scissors js-player-move" data-move="scissors" disabled>Scissors</button>
+            <button class="paper js-player-move" data-move="paper" disabled>Paper</button>
+            <button class="rock js-player-move" data-move="rock" disabled>Rock</button>
+            <button class="lizard js-player-move" data-move="lizard" disabled>Lizard</button>
+            <button class="spock js-player-move" data-move="spock" disabled>Spock</button>
+            <img src="img/spock_all.png" alt="Foto move in the game.">
+        </div>
+    </section>
+    <!-- MODALS -->
+    <div class="overlay">
+        <div class="modal-start">
+            <form class="form-start">
+                <h2>By rozpocząć grę podaj swoje imie i liczbę rund.</h2>
+                <a href="#" class="close"><i class="fas fa-times"></i></a>
+                <label for="name">Wpisz swoje imię:</label>
+                <input class="player" type="text" name="name">
+                <label for="round">Wpisz ilość rund do rozegrania:</label>
+                <input class="number-rounds" type="number" name="nr_mieszkania" min="1" max="100" />
+                <button class="btn-play">Play</button>
+            </form>
+        </div>
+        <div class="modal-end">
+            <a href="#" class="modal-end-close"><i class="fas fa-times"></i></a>
+            <h1 class="modal-end-title"></h1>
+        </div>
+    </div>
+    <div class="modal-error">
+        <div class="modal-error-content">
+            <a href="" class="modal-error-close"><i class="fas fa-times"></i></a>
+            <h2 class="modal-error-title">Wprowadź poprawne dane!</h2>
+        </div>
+    </div>
+    <div class="modal-info active">
+        <div class="modal-info-content">
+            <a href="" class="modal-info-close"><i class="fas fa-times"></i></a>
+            <h1 class="modal-info-title">Informacja o grze</h1>
+            <ul class="modal-info-list">
+                <li class="modal-info-item">1. Kliknij przycisk Start.</li>
+                <li class="modal-info-item">2. Wpisz nazwę gracza.</li>
+                <li class="modal-info-item">3. Wpisz ilość rund jaką chcesz rozegrać.</li>
+                <li class="modal-info-item">4. Naciśnij przycisk Play.</li>
+                <li class="modal-info-item">5. Następnie klikaj na przyciski oznaczające Twój ruch.</li>
+                <li class="modal-info-item">Dobrej zabawy :)))</li>
+            </ul>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>
